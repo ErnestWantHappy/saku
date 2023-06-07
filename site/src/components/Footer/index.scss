@@ -1,0 +1,91 @@
+
+.footer{
+  div{
+    // border: 1px solid red; 
+  }
+  width: 100%;
+  height: 350px;
+  color: white;
+  background-color: #424A4E;
+  display: flex ;
+  .footleft{
+    width: 40%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.4rem;
+    .info{
+      margin-left: 4rem;
+      font-size: 1.4rem;
+      
+      .tubiao{
+        display: flex;
+        cursor: pointer;
+        li{
+          list-style: none;
+          img{
+            margin-right: 0.5rem;
+          }
+        }
+        li:hover{
+          opacity: 0.6;
+        }
+        li:nth-child(2){
+          margin-left: 3rem;
+        }
+      }  
+    }
+  }
+  .footright{
+    width: 50%;
+    font-size: 1.6rem;
+    letter-spacing: 0.4rem;
+    .top{
+      height: 68%;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      .list{
+        display: flex;
+        width: 40%;
+        div:nth-child(1){
+          margin-right: 10rem;
+        }
+        .liClass{
+          list-style: none;
+          position: relative;
+          margin: 2rem 0;
+          .spanClass{
+            color: white;
+          }
+          .spanClass:before{
+            content: "";
+        position: absolute;
+    left: -3rem;
+top: 50%;
+height: 1px;
+width: 2rem;
+background: white;
+          }
+          .spanClass:hover:before{
+            width: 2.5rem;
+            transition: 0.4s ease-in-out;
+          }
+          .spanClass:hover{
+            margin-left: 0.5rem;
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+    .bottom{
+      height: 20%;
+      letter-spacing: 0.05rem;
+      color: #6e7277;
+      display: flex;
+      // align-items: center;
+      justify-content: end;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+
+
+
+
+
+:root {
+  --clr-zhu1:#7286A0;
+  --clr-zhu2:#222A4D;
+  --clr-zhu3:#B69E85;
+  --clr-zhu4:#59594A;
+  --clr-zhu5:#BE6E46;
+  --clr-wid: 1280px;
+  --clr-wid-2: 1650px;
+  --clr-main: #202C4C;
+  --clr-main2: #C16E4B;
+  --clr-sub: #B89E87;
+  --clr-grdf: #5A594B;
+  --clr-grdt: #70879F;
+  --clr-back: #e8eaf1;
+  font-size: 62.5%;
+}
+
+
+
+.btn01 {
+  display: block;
+  width: 286px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: var(--clr-main);
+  padding: 1rem 0;
+  border: 1px solid var(--clr-main);
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.2s ease;
+  margin: 0 auto;
+
+  &:hover{
+    color: var(--clr-main);
+    background-color: #fff;
+
+    &:after {
+      border-bottom: 10px solid var(--clr-main);
+    }
+  }
+
+  &:after {
+    color: #fff;
+    border-right: 0px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    transition: all 0.2s ease;
+
+  }
+}

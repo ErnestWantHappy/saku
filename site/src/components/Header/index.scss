@@ -1,0 +1,338 @@
+html {
+  font-size: 62.5%;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  font-size: 1.5rem;
+  height: 90px;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  // border-bottom: 1px solid rgba(255, 255, 255, .2);
+  .header-inner {
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    height: 90px;
+    color: #111;
+    font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
+
+    .title {
+      font-size: 3rem;
+      font-family: "Times New Roman", Georgia, Serif;
+
+      .logo {
+        a {
+          width: fit-content;
+          white-space: nowrap;
+          // border: 1px solid black;
+          display: flex;
+          align-items: center;
+
+          img {
+            // border: 1px solid black;
+            margin-right: 2rem;
+          }
+
+          span {
+            color: #111;
+            // border: 1px solid red;
+          }
+        }
+      }
+    }
+
+    .title:hover {
+      cursor: pointer; //鼠标悬停变成手
+    }
+
+    .gnav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      // border: 1px solid red;
+      .daohang {
+        flex: 0.85;
+
+        span {
+          font-size: 2rem;
+          color: #111;
+          display: inline-block;
+          margin: 0 0 0 4rem;
+          height: 100%;
+          position: relative;
+        }
+
+        span:hover {
+          color: var(--clr-zhu3);
+          cursor: pointer; //鼠标悬停变成手
+        }
+
+        span:after {
+          content: "";
+          width: 0;
+          height: 3px;
+          background: var(--clr-zhu3);
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transition: all .5s;
+        }
+
+        span:hover:after {
+          left: 0;
+          width: 100%;
+        }
+
+
+      }
+
+      // .language{
+      //   background: transparent;
+      //   border: none;
+      //   text-decoration: none;
+      //   border-radius: 10px;
+      //   padding: 5px;
+      //   color: #fff;
+      //   font-size: 2rem;
+      //   -moz-border-radius:0.5rem;
+      //   -webkit-border-radius:0.5rem;
+      //   outline: none;//选中的时候不显示边框
+      //   option{
+      //     background: var(--clr-zhu2);
+      //     border: none;
+      //     outline: none;
+      //     // color: var(--clr-zhu3);
+      //   }
+      // }
+      .languages {
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        div {
+          margin-left: 1.5rem;
+          display: flex;
+          height: 5rem;
+          width: 5rem;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Manrope';
+
+          border-radius: 100%;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+          }
+
+          span:hover {
+            z-index: 10;
+            color: #fff;
+            transition: all 0.4s;
+          }
+        }
+
+        div:before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          background: var(--clr-zhu3);
+          border-radius: 100%;
+          transition: .4s;
+          z-index: 2;
+        }
+
+        div:hover:before {
+          width: 5rem;
+          height: 5rem;
+          // cursor: pointer;//鼠标悬停变成手
+        }
+
+        div:hover {
+          cursor: pointer; //鼠标悬停变成手
+          transition: all 0.4s;
+        }
+
+        .languageDiv {
+          // background: #424A4E;
+          // color:#fff;
+          box-shadow: 3px 3px 5px rgb(0 0 0 / 80%);
+        }
+      }
+
+      .menu {
+        position: fixed;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 5000;
+        top: 8px;
+        right: 20px;
+        transition: 1.0s ease-in-out;
+
+        // border: 1px solid red;
+        .menu_open {
+          display: inline-block;
+          color: #111;
+          width: 70px;
+          height: 70px;
+        }
+
+        .menu_open:before {
+          -webkit-transform: translateY(5px);
+          transform: translateY(-5px);
+        }
+
+        .menu_open:after {
+          -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+        }
+
+        .menu_open:before,
+        .menu_open:after {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 45px;
+          height: 1px;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #111;
+          -webkit-transition: .2s ease-in-out;
+          transition: .2s ease-in-out;
+        }
+
+        .menu_open.active::before {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        .menu_open.active::after {
+          transform: translateY(0) rotate(-45deg);
+        }
+      }
+
+      .menu-overplay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #fff, $alpha: 0.95);
+        z-index: 999;
+        .common-inner{      
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          div{
+            // border: 1px solid black;
+          }
+          
+          .LogoImg{
+            flex:0.3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .navList{
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+            .list{
+              display: flex;
+              width: 60%;
+              justify-content: space-between;
+              .liClass{
+                list-style: none;
+                position: relative;
+                padding: 2rem 0;
+                .spanClass{
+                  color: black;
+                  font-size: 3rem;
+                }
+                .spanClass:before{
+                  content: "";
+              position: absolute;
+          left: -3rem;
+    top: 50%;
+    height: 1px;
+    width: 2rem;
+    background: #6e7277;
+                }
+              }
+            }
+            .divBtn{
+              margin-top: 3rem;
+              width: 60%;
+            }
+          }
+          
+        }
+      }
+
+      .menu-overplay-hide {
+        display: none;
+      }
+    }
+  }
+
+  .go-top{
+    position: fixed;
+    display: inline-block;
+    right: -2%;
+    bottom: 20%;
+    color: #6E7277;
+    transform: rotate(-90deg);
+    // border: 1px solid black;
+    font-size: 1.8rem;
+    cursor: pointer;
+    width: 145px;
+    background: url("../../../public/longarwR.png") no-repeat;
+    background-position: 70px 8px;
+    transition: 0.4s ease-in-out;
+  }
+  .go-top:hover{
+    right: -2%;
+    bottom: 21%;
+  }
+  .reserve{
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    font-size: 1.6rem;
+    color: white;
+    width: 210px;
+    height: 60px;
+    background-color: #3C3E41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "EB Garamond" !important;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .reserve:hover{
+    bottom: -1%;
+  }
+
+
+}
