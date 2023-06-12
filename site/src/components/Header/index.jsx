@@ -14,7 +14,8 @@ class Header extends React.Component {
       dataImg1: {},
       classLang: "languageDiv",
       lang: 0,
-      menuFlag:false
+      menuFlag: false,
+      langFlag: false,
     };
   }
   //生命周期函数，在render之前执行
@@ -42,7 +43,8 @@ class Header extends React.Component {
     }, 100);
   };
 
-  changeLanguage(index) {
+  changeLanguage = (index) => {
+    console.log(index);
     this.setState({ lang: index });
     index = index + 1;
     this.props.getMsg(index);
@@ -50,130 +52,146 @@ class Header extends React.Component {
       this.setState({ homePage: this.props.homePage });
       this.setState({ dataImg1: this.props.dataImg1 });
     }, 100);
-  }
+  };
 
   menuChange = () => {
-    this.setState({ menuFlag: !this.state.menuFlag});
-    console.log(this.state.menuFlag)
-  }
+    this.setState({ menuFlag: !this.state.menuFlag });
+    if (document.body.style.overflow === "hidden") {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
 
-  goTop=()=>{
+    console.log(this.state.menuFlag);
+  };
+
+  languageClick = () => {
+    this.setState({ langFlag: !this.state.langFlag });
+    console.log(this.state.langFlag);
+  };
+
+  goTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-  }
-
-  
+  };
 
   render() {
     return (
-      this.state.homePage.navigation && (
+      this.state.homePage && (
         <header>
           <div className="header-inner">
-            <span className="title">
-              <div className="logo">
-                <Link to={"/"}>
-                  <img src="/logo.png" width={80} height={55}></img>
-                  <span>富士サクラリゾート</span>
-                </Link>
-              </div>
-            </span>
             <div className="gnav">
-              <div className="daohang">
-                <Link to={"/hotel"}>
-                  <span>{this.state.homePage.navigation[0]}</span>
-                </Link>
-                <Link to={"/hotel"}>
-                  <span>{this.state.homePage.navigation[1]}</span>
-                </Link>
-                <Link to={"/hotel"}>
-                  <span>{this.state.homePage.navigation[2]}</span>
-                </Link>
-                <Link to={"/hotel"}>
-                  <span>{this.state.homePage.navigation[3]}</span>
-                </Link>
-                <Link to={"/hotel"}>
-                  <span>交通指南</span>
-                </Link>
-              </div>
-              {/* <select className="language" onChange={this.changeLang}>
-              <option value={1}>中文</option>
-              <option value={2}>英文</option>
-              <option value={3}>日语</option>
-            </select> */}
-              <div className="languages">
-                {this.state.homePage.language.map((item, index) => {
-                  return (
-                    <div
-                      className={
-                        index === this.state.lang ? this.state.classLang : ""
-                      }
-                      key={index}
-                      onClick={this.changeLanguage.bind(this, index)}
-                    >
-                      <span>{item}</span>
-                    </div>
-                  );
-                })}
-              </div>
               <div className="menu">
-                <span className={
-                        this.state.menuFlag === true ? "menu_open active" : "menu_open"
-                      }  onClick={this.menuChange}></span>
+                <span
+                  className={
+                    this.state.menuFlag === true
+                      ? "menu_open active"
+                      : "menu_open"
+                  }
+                  onClick={this.menuChange}
+                ></span>
               </div>
-              <nav className={
-                        this.state.menuFlag === true ? "menu-overplay" : "menu-overplay-hide"
-                      }>
-                  <div className="common-inner">
-                      <div className="LogoImg"><img src="/logo.png" width={200} height={140}></img></div>
-                      <div className="navList">
-                        <div className="list">
-                          <div>
-                            <li className="liClass">
-                            <Link to={"/hotel"}>
-                            <span className="spanClass">酒店</span>
-                            </Link>
-                            </li>
-                            <li className="liClass">
-                            <Link to={"/hotel"}>
-                            <span className="spanClass">民宿</span>
-                            </Link>
-                            </li>
-                            <li className="liClass">
-                            <Link to={"/hotel"}>
-                            <span className="spanClass">美食</span>
-                            </Link>
-                            </li>
-                          </div>
-                          <div>
-                          <li className="liClass">
-                            <Link to={"/hotel"}>
-                            <span className="spanClass">玩乐</span>
-                            </Link>
-                            </li>
-                            <li className="liClass">
-                            <Link to={"/hotel"}>
-                            <span className="spanClass">交通指南</span>
-                            </Link>
-                            </li>
-                            <li className="liClass">
-                            <Link to={"/hotel"}>
-                            <span className="spanClass">联系我们</span>
-                            </Link>
-                            </li>
-                          </div>
-                        </div>
-                        <div className="divBtn"><Button size="large" type="primary" block="true">预定房间</Button></div>
-                      </div>
+              <nav
+                className={
+                  this.state.menuFlag === true
+                    ? "menu-overplay"
+                    : "menu-overplay-hide"
+                }
+              >
+                <div className="common-inner">
+                  <div className="LogoImg">
+                    <img src="/SAKURA1.png" width={200} height={180}></img>
                   </div>
+                  <div className="navList">
+                    <div className="list">
+                      <div>
+                        <li className="liClass">
+                          <Link to={"/hotel"}>
+                            <span className="spanClass">酒店</span>
+                          </Link>
+                        </li>
+                        <li className="liClass">
+                          <Link to={"/hotel"}>
+                            <span className="spanClass">民宿</span>
+                          </Link>
+                        </li>
+                        <li className="liClass">
+                          <Link to={"/hotel"}>
+                            <span className="spanClass">美食</span>
+                          </Link>
+                        </li>
+                      </div>
+                      <div>
+                        <li className="liClass">
+                          <Link to={"/hotel"}>
+                            <span className="spanClass">玩乐</span>
+                          </Link>
+                        </li>
+                        <li className="liClass">
+                          <Link to={"/hotel"}>
+                            <span className="spanClass">交通指南</span>
+                          </Link>
+                        </li>
+                        <li className="liClass">
+                          <Link to={"/hotel"}>
+                            <span className="spanClass">联系我们</span>
+                          </Link>
+                        </li>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="divBtnArea">
+                  <div className="kong"></div>
+                  <div className="divBtn">Reservation／予約する</div>
+                </div>
               </nav>
             </div>
           </div>
-          <div className="go-top" onClick={this.goTop}>
-                page top
+          <div
+            className={
+              this.state.langFlag === true
+                ? "language-area isopen"
+                : "language-area"
+            }
+            onClick={this.languageClick}
+          >
+            <div className="language">
+              <div className="language-inner">
+                <div className="language-head">
+                  <span className="language-target-txt">Language</span>
+                </div>
+                <div className="language-body">
+                  <ul className="language-list">
+                    <li
+                      className="language-list-item"
+                      onClick={() => this.changeLanguage(0)}
+                    >
+                      日本语
+                    </li>
+                    <li
+                      className="language-list-item"
+                      onClick={() => this.changeLanguage(1)}
+                    >
+                      English
+                    </li>
+                    <li
+                      className="language-list-item"
+                      onClick={() => this.changeLanguage(2)}
+                    >
+                      中文
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
+          {/* <div className="go-top" onClick={this.goTop}>
+                page top
+          </div> */}
           <div className="reserve">Reservation／予約する</div>
         </header>
       )

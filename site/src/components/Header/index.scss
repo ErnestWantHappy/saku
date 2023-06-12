@@ -19,7 +19,8 @@ header {
     padding: 0 5rem;
     height: 90px;
     color: #111;
-    font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
+    font-family: "Cormorant Garamond", "Times New Roman", Times, Garamond,
+      Georgia, serif;
 
     .title {
       font-size: 3rem;
@@ -54,125 +55,7 @@ header {
       display: flex;
       align-items: center;
       width: 100%;
-
-      // border: 1px solid red;
-      .daohang {
-        flex: 0.85;
-
-        span {
-          font-size: 2rem;
-          color: #111;
-          display: inline-block;
-          margin: 0 0 0 4rem;
-          height: 100%;
-          position: relative;
-        }
-
-        span:hover {
-          color: var(--clr-zhu3);
-          cursor: pointer; //鼠标悬停变成手
-        }
-
-        span:after {
-          content: "";
-          width: 0;
-          height: 3px;
-          background: var(--clr-zhu3);
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          transition: all .5s;
-        }
-
-        span:hover:after {
-          left: 0;
-          width: 100%;
-        }
-
-
-      }
-
-      // .language{
-      //   background: transparent;
-      //   border: none;
-      //   text-decoration: none;
-      //   border-radius: 10px;
-      //   padding: 5px;
-      //   color: #fff;
-      //   font-size: 2rem;
-      //   -moz-border-radius:0.5rem;
-      //   -webkit-border-radius:0.5rem;
-      //   outline: none;//选中的时候不显示边框
-      //   option{
-      //     background: var(--clr-zhu2);
-      //     border: none;
-      //     outline: none;
-      //     // color: var(--clr-zhu3);
-      //   }
-      // }
-      .languages {
-        font-size: 1.4rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        div {
-          margin-left: 1.5rem;
-          display: flex;
-          height: 5rem;
-          width: 5rem;
-          align-items: center;
-          justify-content: center;
-          font-family: 'Manrope';
-
-          border-radius: 100%;
-
-          span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            width: 100%;
-            height: 100%;
-          }
-
-          span:hover {
-            z-index: 10;
-            color: #fff;
-            transition: all 0.4s;
-          }
-        }
-
-        div:before {
-          content: "";
-          position: absolute;
-          display: inline-block;
-          width: 0;
-          height: 0;
-          background: var(--clr-zhu3);
-          border-radius: 100%;
-          transition: .4s;
-          z-index: 2;
-        }
-
-        div:hover:before {
-          width: 5rem;
-          height: 5rem;
-          // cursor: pointer;//鼠标悬停变成手
-        }
-
-        div:hover {
-          cursor: pointer; //鼠标悬停变成手
-          transition: all 0.4s;
-        }
-
-        .languageDiv {
-          // background: #424A4E;
-          // color:#fff;
-          box-shadow: 3px 3px 5px rgb(0 0 0 / 80%);
-        }
-      }
+      height: 100%;
 
       .menu {
         position: fixed;
@@ -181,7 +64,7 @@ header {
         z-index: 5000;
         top: 8px;
         right: 20px;
-        transition: 1.0s ease-in-out;
+        transition: 1s ease-in-out;
 
         // border: 1px solid red;
         .menu_open {
@@ -205,7 +88,7 @@ header {
         .menu_open:after {
           position: absolute;
           display: block;
-          content: '';
+          content: "";
           width: 45px;
           height: 1px;
           top: 0;
@@ -214,8 +97,8 @@ header {
           left: 0;
           margin: auto;
           background: #111;
-          -webkit-transition: .2s ease-in-out;
-          transition: .2s ease-in-out;
+          -webkit-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out;
         }
 
         .menu_open.active::before {
@@ -233,60 +116,104 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba($color: #fff, $alpha: 0.95);
+        background: #eff1f2;
         z-index: 999;
-        .common-inner{      
+        display: flex;
+        flex-direction: column;
+
+        .common-inner {
           width: 100%;
-          height: 100%;
+          height: 65%;
           display: flex;
           align-items: center;
           justify-content: center;
-          div{
+
+          div {
             // border: 1px solid black;
           }
-          
-          .LogoImg{
-            flex:0.3;
+
+          .LogoImg {
+            flex: 0.3;
             display: flex;
             align-items: center;
             justify-content: center;
           }
-          .navList{
-            flex: 0.5;
+
+          .navList {
+            flex: 1 1;
             display: flex;
+            height: 100%;
             flex-direction: column;
             align-items: center;
-            // justify-content: center;
-            .list{
+            justify-content: center;
+
+            .list {
               display: flex;
               width: 60%;
+              height: 35vh;
               justify-content: space-between;
-              .liClass{
+
+              .liClass {
                 list-style: none;
                 position: relative;
-                padding: 2rem 0;
-                .spanClass{
+                height: 33%;
+                display: block;
+
+                /* 将 li 元素显示为行内块元素 */
+                .spanClass {
                   color: black;
                   font-size: 3rem;
+                  cursor: pointer;
+                  padding-left: 1.6em;
+                  position: relative;
+                  transition: 0.5s;
                 }
-                .spanClass:before{
+
+                .spanClass:before {
+                  background: #6e7277;
                   content: "";
-              position: absolute;
-          left: -3rem;
-    top: 50%;
-    height: 1px;
-    width: 2rem;
-    background: #6e7277;
+                  height: 1px;
+                  left: 0;
+                  margin-top: 1px;
+                  position: absolute;
+                  top: 50%;
+                  transition: 0.5s;
+                  width: 1em;
                 }
               }
             }
-            .divBtn{
-              margin-top: 3rem;
-              width: 60%;
-            }
+
+
           }
-          
         }
+
+        .divBtnArea {
+          // border: 1PX solid BLACK;
+          height: 20%;
+          display: flex;
+
+          .kong {
+            flex: 0.4;
+          }
+
+          .divBtn {
+            flex: 0.45;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            background: #fff;
+            font-size: 2.2rem;
+            cursor: pointer;
+          }
+
+          .divBtn:hover {
+            background: #f6b784;
+            transition: 0.4s all ease-in-out;
+          }
+        }
+
       }
 
       .menu-overplay-hide {
@@ -295,12 +222,102 @@ header {
     }
   }
 
-  .go-top{
+  .language-area {
+    position: fixed;
+    z-index: 10;
+    width: 16rem;
+    opacity: 1;
+    right: -10rem;
+    bottom: 60px;
+    font-family: "Noto Sans JP", "Noto Sans TC", "Noto Sans SC", sans-serif;
+    visibility: visible;
+    transition: 0.5s ease-in-out;
+
+    .language {
+      overflow: hidden;
+      cursor: pointer;
+
+      .language-inner {
+        display: flex;
+        height: 12rem;
+
+        .language-head {
+          background-color: #3c3e41;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 6rem;
+
+          .language-target-txt {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            color: #fff;
+            font-family: "Lora", serif;
+            letter-spacing: 0.1rem;
+            font-size: 1.6rem;
+          }
+        }
+
+        .language-body {
+          width: 10rem;
+
+          .language-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 0 2.5rem;
+            background-color: #3c3e41;
+            border-left: 1px solid #686868;
+            list-style: none;
+
+            .language-list-item {
+              font-size: 1.3rem;
+              line-height: 2;
+              color: #fff;
+              letter-spacing: 0.04em;
+              position: relative;
+              /* 设置相对定位，用于下划线定位 */
+              /* 添加过渡效果，使下划线的出现和消失更平滑 */
+            }
+
+            .language-list-item:after {
+              content: "";
+              /* 添加内容为空，用于显示下划线 */
+              position: absolute;
+              /* 设置绝对定位，相对于 li 元素进行定位 */
+              bottom: -2px;
+              /* 设置下划线相对于 li 元素底部的位置 */
+              left: 0;
+              /* 设置下划线相对于 li 元素左边的位置 */
+              width: 0;
+              height: 2px;
+              /* 设置下划线的高度 */
+              background-color: white;
+              /* 设置下划线的颜色，这里为白色 */
+              transition: all 0.5s ease;
+            }
+
+            .language-list-item:hover:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .isopen {
+    right: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .go-top {
     position: fixed;
     display: inline-block;
     right: -2%;
     bottom: 20%;
-    color: #6E7277;
+    color: #6e7277;
     transform: rotate(-90deg);
     // border: 1px solid black;
     font-size: 1.8rem;
@@ -310,11 +327,13 @@ header {
     background-position: 70px 8px;
     transition: 0.4s ease-in-out;
   }
-  .go-top:hover{
+
+  .go-top:hover {
     right: -2%;
     bottom: 21%;
   }
-  .reserve{
+
+  .reserve {
     position: fixed;
     right: 0%;
     bottom: 0%;
@@ -322,17 +341,131 @@ header {
     color: white;
     width: 210px;
     height: 60px;
-    background-color: #3C3E41;
+    background-color: #3c3e41;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "EB Garamond" !important;
+    // font-family: "EB Garamond" !important;
+    font-family: "Lora", serif;
     cursor: pointer;
     transition: 0.4s ease-in-out;
   }
-  .reserve:hover{
+
+  .reserve:hover {
     bottom: -1%;
   }
+}
 
+@media screen and (max-width: 600px) {
+  div {
+    // border: 1px solid red;
+  }
 
+  header {
+    .header-inner {
+
+      .gnav {
+        .menu {
+
+          // border: 1px solid red;
+          .menu_open {
+            width: 50px;
+            height: 50px;
+          }
+
+          .menu_open:before {}
+
+          .menu_open:after {}
+
+          .menu_open:before,
+          .menu_open:after {
+            width: 30px;
+          }
+
+          .menu_open.active::before {}
+
+          .menu_open.active::after {}
+        }
+
+        .menu-overplay {
+
+          .common-inner {
+            flex-direction: column;
+
+            div {
+              // border: 1px solid black;
+            }
+
+            .LogoImg {
+              img {
+                width: 30vw;
+                height: 15vh;
+              }
+            }
+
+            .navList {
+              width: 100%;
+              .list {
+
+                .liClass {
+                  .spanClass {
+                    font-size: 1.6rem;
+                  }
+
+                  .spanClass:before {}
+                }
+              }
+            }
+          }
+          .divBtnArea{
+            .kong{
+              flex:0;
+            }
+            .divBtn{
+              flex: 1;
+            }
+          }
+        }
+
+        .menu-overplay-hide {}
+      }
+    }
+
+    .language-area {
+      display: none;
+      .language {
+
+        .language-inner {
+
+          .language-head {
+
+            .language-target-txt {}
+          }
+
+          .language-body {
+            .language-list {
+
+              .language-list-item {}
+
+              .language-list-item:after {}
+
+              .language-list-item:hover:after {}
+            }
+          }
+        }
+      }
+    }
+
+    .isopen {}
+
+    .go-top {}
+
+    .go-top:hover {}
+
+    .reserve {
+      width: 100%;
+    }
+
+    .reserve:hover {}
+  }
 }

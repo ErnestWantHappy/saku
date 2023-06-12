@@ -1,342 +1,406 @@
 @import "~antd/dist/antd.css";
+
 // import img1 from "../../../public/bg_lead.jpg";
-.home{
+.home {
     display: flex;
     // border: 1px solid #00f;
     // margin-top: 90px;
-    flex-direction:column;
+    flex-direction: column;
     width: 100%;
     height: auto;
     color: #6E7277;
-    font-size: 1.6rem;
-    .Movie{
+
+    .Movie {
         width: 100%;
         // height: 680px;
         overflow: hidden;
-        .movie{
+
+        .movie {
             width: 100%;
         }
     }
-    .about{
+
+    .about {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 72rem;
+        height: auto;
         color: #6E7277;
+        padding: 10rem 0;
         // background: linear-gradient(#ffffff 0%, #e2d1c3 100%);
         background-image: url("../../../public/bg_lead.jpg");
-        .aboutTitle{
+
+        .aboutTitle {
             font-weight: bold;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             letter-spacing: 0.47em;
-          }
-        .aboutContent{
+        }
+
+        .aboutContent {
             display: flex;
             margin: 5rem 0;
             // border: 1px solid red;
             font-size: 2rem;
             width: 15rem;
             justify-content: space-between;
-            .content{
+
+            .content {
                 width: 2rem;
                 line-height: 5rem;
             }
         }
-        .aboutFoot{
+
+        .aboutFoot {
             // border: 1px solid red;
-            font-size: 1.6rem;
-            width: 30%;
+            font-size: 2rem;
+            width: 40%;
             text-indent: 3rem;
+            margin-bottom: 7rem;
         }
 
     }
-    .hotel{
+
+    .hotel {
         // border: 1px solid red;
         width: 100%;
         margin: 0;
-        background: rgba(255, 255, 255, 0.4);
+        background: #261E1B;
         display: flex;
-        background-image: url("../../../public/hotelbg.jpg");
-        div{
+        padding: 12vw 10vw;
+        color: #aaa;
+        justify-content: space-between;
+        div {
             // border: 1px solid red;
         }
-        .hotelImg{
+
+        .hotelImg {
             width: 60%;
             overflow: hidden;
-            height: auto;
-        }
-        .hotelContent{
-            width: 40%;
-            color: #6E7277;
-            margin-left: 4rem;
-            .conTitle{
-                margin-top: 6rem;
-                color: #BE6E46;
-                font-size: 2rem;
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-            }
-            .conTitle1{
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-                color: #BE6E46;
-                font-size: 8rem;
-            }
-            .conContent{
-                margin-top: 5rem;
-                font-size: 2rem;
-                line-height: 1.5rem;
-            }
-            .btnMore{
-                margin-top: 4rem;
-                max-width: 15rem;
-                line-height: 6rem;
-                text-align: center;
-                font-size: 2rem;
-                border: 1px solid #000000;
-                border-radius: 128px;
-                letter-spacing: 0.5rem;
-                cursor: pointer;
-            }
-            .btnMore:hover{
-                opacity: 0.3;
-            }
-        }
-    }
-    .minsu{
-        // border: 1px solid red;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        // background: url("../../../public/bg05.png") no-repeat;
-        
-        background-image: url("../../../public/hotelbg.jpg"), url("../../../public/bg05.png");
-        background-size: cover, auto;
-  background-position: center top, 5% 80%;
-  background-repeat: repeat, no-repeat;
-  background-blend-mode: multiply, screen;
-        div{
-            // border: 1px solid red;
-        }
-        .hotelImg{
-            width: 60%;
-            overflow: hidden;
-            height: auto;
-        }
-        .hotelContent{
-            width: 40%;
-            color: #6E7277;
-            text-align: right;
-            margin-right: 4rem;
-            .conTitle{
-                margin-top: 6rem;
-                color: #BE6E46;
-                font-size: 2rem;
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-            }
-            .conTitle1{
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-                color: #BE6E46;
-                font-size: 8rem;
-            }
-            .conContent{
-                margin-top: 5rem;
-                margin-left: 4rem;
-                font-size: 1.8rem;
-                text-align: left;
-                text-indent: 4rem;
-            }
-            .btnMore{
-                margin-top: 4rem;
-                width: 15rem;
-                line-height: 6rem;
-                text-align: center;
-                font-size: 2rem;
-                border: 1px solid #000000;
-                border-radius: 128px;
-                letter-spacing: 0.5rem;
-                cursor: pointer;
-                float: right;
-            }
-            .btnMore:hover{
-                opacity: 0.3;
-            }
-        }
-    }
-    .meishi{
-        // border: 1px solid red;
-        width: 100%;
-        margin: 0;
-        background: rgba(255, 255, 255, 0.4);
-        display: flex;
-        background-image: url("../../../public/hotelbg.jpg");
-        div{
-            // border: 1px solid red;
-        }
-        .hotelImg{
-            width: 60%;
-            overflow: hidden;
-            height: auto;
+            height: 100%;
             img{
-                width: 100%;
+                width: 100%; /* 图片的宽度为容器宽度 */
+                height: 100%; /* 图片的高度为容器高度 */
+                object-fit: cover; /* 设置图片自适应容器并保持比例 */
             }
         }
-        .hotelContent{
-            width: 40%;
-            color: #6E7277;
-            margin-left: 4rem;
-            .conTitle{
-                margin-top: 6rem;
-                color: #BE6E46;
-                font-size: 2rem;
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-            }
-            .conTitle1{
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-                color: #BE6E46;
-                font-size: 8rem;
-            }
-            .conContent{
-                margin-top: 5rem;
-                font-size: 1.8rem;
-                text-indent: 4rem;
-                margin-right: 2rem;
-            }
-            .btnMore{
-                margin-top: 3rem;
-                max-width: 15rem;
-                line-height: 6rem;
-                text-align: center;
-                font-size: 2rem;
-                border: 1px solid #000000;
-                border-radius: 128px;
-                letter-spacing: 0.5rem;
-                cursor: pointer;
-            }
-            .btnMore:hover{
-                opacity: 0.3;
-            }
-        }
-    }
-    .wanle{
-        // border: 1px solid red;
-        width: 100%;
-        padding-bottom: 9rem;
-        background: rgba(255, 255, 255, 0.4);
-        display: flex;
-        background-image: url("../../../public/hotelbg.jpg");
-        div{
-            // border: 1px solid red;
-        }
-        .wanleImg{
-            width: 60%;
+
+        .hotelContent {
+            width: 35%;
             position: relative;
-            display: block;
-            .img01{
-                width: 100%;
-                // margin: 0 0 0 auto;
-                img{
+            .conTitle {
+                font-size: 2.8vw;
+            }
+
+            .conTitle1 {
+                font-size: 1.4vw;
+            }
+
+            .conContent {
+                padding-top: 5rem;
+                width: 72.92%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                .text{
+                    line-height: 1.8;
                     width: 80%;
                 }
-            }
-            .img02{
-                position: absolute;
-                top: 70%;
-                right: 0;
-                width: 40%;
-                img{
-                    width: 100%;
+                .btnMore {
+                    margin-top: 4rem;
+                    cursor: pointer;
+                    width: 80%;
+                    font-family: "EB Garamond";
+                    font-weight: 400;
+                    letter-spacing: .1em;
+                    opacity: 1 !important;
+                    padding: 18px 18px 19px;
+                    position: relative;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                    position: relative;
                 }
-            }
-        }
-        .hotelContent{
-            width: 40%;
-            color: #6E7277;
-            margin-left: 4rem;
-            padding-right: 4rem;
-            .conTitle{
-                margin-top: 6rem;
-                color: #BE6E46;
-                font-size: 2rem;
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-            }
-            .conTitle1{
-                font-family: 'Cormorant Garamond', "Times New Roman", Times, Garamond, Georgia, serif;
-                color: #BE6E46;
-                font-size: 8rem;
-            }
-            .conContent{
-                margin-top: 5rem;
-                font-size: 1.8rem;
-                text-indent: 4rem;
-                margin-right: 2rem;
-            }
-            .btnMore{
-                margin-top: 4rem;
-                width: 15rem;
-                line-height: 6rem;
-                text-align: center;
-                font-size: 2rem;
-                border: 1px solid #000000;
-                border-radius: 128px;
-                letter-spacing: 0.5rem;
-                cursor: pointer;
-                float: right;
-            }
-            .btnMore:hover{
-                opacity: 0.3;
-            }
+
+                .btnMore:before{
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    content: '';
+                    width: 100%;
+                    border: 1px solid #aaa;
+                    height: 100%;
+                }
+            }  
+            .conContent:before {
+                background-color: #aaa;
+                content: '';
+                display: block;
+                width: 20px;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }   
         }
     }
-    .contentStyle{
-        
+
+    .minsu {
+        // border: 1px solid red;
+        width: 100%;
         margin: 0;
-  height: 800px;
-  color: black;
-  lineHeight: 160px;
-  textAlign: center;
-//   background-color: #336699;
-  background-image: url("../../../public/bg_lead.jpg");
+        background: #FFFFFF;
+        display: flex;
+        padding: 12vw 10vw;
+        color: #aaaaaa;
+        justify-content: space-between;
+        div {
+            // border: 1px solid red;
+        }
+
+        .hotelImg {
+            width: 60%;
+            overflow: hidden;
+            height: 100%;
+            img{
+                width: 100%; /* 图片的宽度为容器宽度 */
+                height: 100%; /* 图片的高度为容器高度 */
+                object-fit: cover; /* 设置图片自适应容器并保持比例 */
+            }
+        }
+
+        .hotelContent {
+            width: 35%;
+            position: relative;
+            .conTitle {
+                font-size: 2.8vw;
+            }
+
+            .conTitle1 {
+                font-size: 1.4vw;
+            }
+
+            .conContent {
+                padding-top: 5rem;
+                width: 72.92%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                .text{
+                    line-height: 1.8;
+                    width: 80%;
+                }
+                .btnMore {
+                    margin-top: 4rem;
+                    cursor: pointer;
+                    width: 80%;
+                    font-family: "EB Garamond";
+                    font-weight: 400;
+                    letter-spacing: .1em;
+                    opacity: 1 !important;
+                    padding: 18px 18px 19px;
+                    position: relative;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                    position: relative;
+                }
+
+                .btnMore:before{
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    content: '';
+                    width: 100%;
+                    border: 1px solid #aaa;
+                    height: 100%;
+                }
+            }  
+            .conContent:before {
+                background-color: #aaa;
+                content: '';
+                display: block;
+                width: 20px;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }   
+        }
+    }
+
+    
+
+    .contentStyle {
+
+        margin: 0;
+        // border-top: 1px solid black;
+        height: 800px;
+        color: black;
+        lineHeight: 160px;
+        textAlign: center;
+        // background: #261E1B;
+        background-image: url("../../../public/bg_lead.jpg");
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        .title{
+
+        .title {
             font-size: 2rem;
             margin: 4rem 0;
         }
-        .content{
+
+        .content {
             display: flex;
             margin-top: 3rem;
             flex-direction: column;
             align-items: center;
             width: 100%;
             font-size: 1.8rem;
-            .conInner{
+
+            .conInner {
                 width: 70%;
                 display: flex;
                 align-items: center;
                 height: 60px;
                 border-top: 1px dashed grey;
-                .left{
+
+                .left {
                     margin-left: 2rem;
                     width: 15rem;
                 }
-                .left0{
+
+                .left0 {
                     margin-left: 28rem;
                     width: 15rem;
                 }
             }
         }
     }
+
     .ant-carousel .slick-dots li.slick-active button {
-        background:black;
+        background: black;
         opacity: 1;
     }
-    
 
-.ant-carousel .slick-dots li button {
-    background:black;
+
+    .ant-carousel .slick-dots li button {
+        background: black;
+    }
+
 }
-   
+
+@media screen and (max-width: 600px){
+    .home{
+        font-size: 1.4rem;
+        .Movie{
+            // border: 1px solid red;
+            overflow: hidden;
+            position: relative;
+            height: 92vh;
+            left: 0;
+            top: 0;
+            // transform: scaleX(1); /* 调整视频的缩放比例，可以根据需要调整数值 */
+            .movie{
+                height: 100%;
+                object-fit: cover;
+                width: 100%;   
+            }
+        }
+        .about{
+            padding: 5rem 0 0 0;
+            div{
+                // border: 1px solid violet;
+            }
+            .aboutTitle{
+                font-size: 2rem;
+            }
+            .aboutContent{
+                .content{
+                    line-height: 4rem;
+                    font-size: 1.6rem;
+                }
+            }
+            .aboutFoot{
+                width: 85%;
+                font-size: 1.4rem;
+            }
+        }
+        .hotel{
+            flex-direction: column;
+            padding: 10vw 0;
+            .hotelImg{
+                width: 100%;
+            }
+            .hotelContent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 3rem;
+                .conTitle{
+                    font-size: 2.8rem;
+                    margin: 0 auto;
+                }
+                .conTitle1{
+                    font-size: 2rem;
+                    margin: 0 auto;
+                }
+                .conContent{
+                    position: relative;
+                    width: 100%;
+                    padding-top: 2rem;
+                    .text{
+                        width: 90%;
+                        margin: 0px auto;
+                    }
+                    .btnMore{
+                        width: 90%;
+                        margin: 3rem auto;
+                    }
+                }
+                .conContent::before{
+                    width: 0;
+                }
+            }
+        }
+        .minsu{
+            flex-direction: column;
+            padding: 10vw 0;
+            .hotelImg{
+                width: 100%;
+            }
+            .hotelContent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 3rem;
+                .conTitle{
+                    font-size: 2.8rem;
+                    margin: 0 auto;
+                }
+                .conTitle1{
+                    font-size: 2rem;
+                    margin: 0 auto;
+                }
+                .conContent{
+                    position: relative;
+                    width: 100%;
+                    padding-top: 2rem;
+                    .text{
+                        width: 90%;
+                        margin: 0px auto;
+                    }
+                    .btnMore{
+                        width: 90%;
+                        margin: 3rem auto;
+                    }
+                }
+                .conContent::before{
+                    width: 0;
+                }
+            }
+        }
+    }
 }

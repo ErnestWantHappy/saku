@@ -11,8 +11,8 @@ app.get("/api/data1",function (request,response) {
   var data = require('./data1.json');//要获取的json文件
   response.send(data);
 })
-app.listen('8001',function () {
-  console.log('>listening on 8001')
+app.listen('8002',function () {
+  console.log('>listening on 8002')
 });
 
 app.get("/api/data2",function (request,response) {

@@ -1,28 +1,7 @@
 {
   "homePage": {
-    "navigation": [
-      "日文",
-      "日文",
-      "美食",
-      "玩乐",
-      "交通指南"
-    ],
-    "bottom": {
-      "title": "日文",
-      "msg": "日文",
-      "address": "京ICP备15039566号",
-      "contact": "联系我们",
-      "wxImg":"http://43.143.111.217:8008/31.png",
-      "wxplatformImg":"http://43.143.111.217:8008/32.png",
-      "person":"联系人",
-      "tel":"联系电话",
-      "email":"邮箱",
-      "wx":"微信",
-      "wxPublic":"微信公众平台"
-    },
-    "language": [
-      "CH",
-      "JP"
-    ]
+    "about": {
+      "title": "SAKURA RESORT"
+    }
   }
 }
