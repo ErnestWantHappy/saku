@@ -1,6 +1,6 @@
 const api =  async(url = '', data = {}, type = 'GET') => {
-    const baseUrl = "http://43.143.111.217:8002" // 基础路径
-    // const baseUrl = "http://localhost:8001" // 基础路径
+    const baseUrl = "http://152.136.42.72:8003" // 基础路径
+    // const baseUrl = "http://localhost:8003" // 基础路径
     type = type.toUpperCase(); // 请求方式小写转换成大写
     url = baseUrl + url; // 请求地址的拼接
  

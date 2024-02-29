@@ -54,11 +54,11 @@ class Home extends React.Component {
         <div className="about">
           <div className="aboutTitle">{this.state.homePage.about.title}</div>
           <div className="aboutContent">
-            <div className="content">体验度假乐趣</div>
-            <div className="content">尽享别墅生活</div>
+            <div className="content">{this.state.homePage.about.title1[0]}</div>
+            <div className="content">{this.state.homePage.about.title1[1]}</div>
           </div>
           <div className="aboutFoot">
-            “富士樱花度假村”静谧舒适，尽显南阿尔卑斯山壮美景色。这里有多彩的自然风光，水流山涧，天然森林和宏伟的舍农索城堡，让您尽情享受大自然的美妙。
+          {this.state.homePage.about.content}
           </div>
         </div>
         <div className="hotel">
@@ -69,7 +69,7 @@ class Home extends React.Component {
             <div className="conTitle">お部屋</div>
             <div className="conTitle1"> Our Rooms</div>
             <div className="conContent">
-              <div className="text">独家精选四款雅致客房，每一间都展现出无与伦比的品质与独特魅力。以需求为导向，精确匹配房型，居住体验完美无缺。餐饮服务精心设计，呈现精致美食，品味独特的美味盛宴。尽享奢华与舒适的绝佳时刻。</div>
+              <div className="text">{this.state.homePage.text.hotel}</div>
               <div className="btnMore">View More</div>
             </div>
           </div>
@@ -82,7 +82,7 @@ class Home extends React.Component {
             <div className="conTitle">みんしゅく</div>
             <div className="conTitle1">Guesthouse</div>
             <div className="conContent">
-            <div className="text">欢迎来到我们的高雅民宿，十间精心设计的客房，全部允许携带宠物。与您的伙伴共享奢华，尽享宠物友好的空间和专属待遇。愉悦花园、宽敞庭院，为您与宠物创造难忘时刻。在这里，您的宠物将得到无微不至的关怀，与您共度珍贵时光。</div>
+            <div className="text">{this.state.homePage.text.minsu}</div>
             <div className="btnMore">View More</div>
             </div>
           </div>
@@ -95,7 +95,7 @@ class Home extends React.Component {
             <div className="conTitle">びしょく</div>
             <div className="conTitle1">Delicious Food</div>
             <div className="conContent">
-            <div className="text">您可以品尝到意大利菜和日本料理。我们的菜单根据季节和供应情况而变化，以保证您品尝到最新鲜的食材。此外，我们还提供烧烤场，让您享受烧烤的乐趣。</div>
+            <div className="text">{this.state.homePage.text.food}</div>
             <div className="btnMore">View More</div>
               
             </div>
@@ -109,7 +109,7 @@ class Home extends React.Component {
             <div className="conTitle">あそび</div>
             <div className="conTitle1">Recreation</div>
             <div className="conContent">
-            <div className="text">我们提供多种玩乐设施，包括室内游泳池、网球场、卡丁车等。此外，我们还有多功能厅、狗跑道和热水浴设施等设施。如果您喜欢野营，我们也支持在营地中享受春夏凉爽舒适的氛围，秋冬则可以尽情欣赏星空。</div>
+            <div className="text">{this.state.homePage.text.play}</div>
             <div className="btnMore">View More</div>
             </div>
           </div>

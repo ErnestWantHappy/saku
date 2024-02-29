@@ -1,7 +1,16 @@
 {
   "homePage": {
     "about": {
-      "title": "SAKURA RESORT"
+      "title": "SAKURA RESORT",
+      "title1":["Experience vacation fun","Enjoy villa life"],
+      "content":"'Fuji Sakura Resort' is a quiet and comfortable place with stunning views of the Southern Alps. There are colorful natural scenery, rivers, mountains, natural forests and the magnificent Chenonceau Castle, allowing you to enjoy the beauty of nature."
+    },
+    "navigation":["Hotel","Home","Food","Play","Traffic guide","Contact us"],
+    "text":{
+      "hotel":"An exclusive selection of four elegant rooms, each with unparalleled quality and charm. Demand-oriented, precisely matched room type, perfect living experience. The catering service is carefully designed to present exquisite cuisine and delicious feast with unique taste. The perfect moment to indulge in luxury and comfort.",
+      "minsu":"Welcome to our pet-friendly homestay with ten elegant rooms. Enjoy luxury and exclusive treatment alongside your pet in our spacious and delightful gardens. Create memorable moments while your pet receives exceptional care and enjoys quality time with you.",
+      "food":"You can taste Italian and Japanese food. Our menu changes according to the season and availability to ensure you taste the freshest ingredients. In addition, we also provide a barbecue area for you to enjoy the fun of barbecuing.",
+      "play":"We provide diverse recreational facilities, including an indoor pool, tennis court, go-karting, and more. Additionally, we offer a multi-function hall, dog track, and hot water baths. For camping enthusiasts, we create a cool camp atmosphere in spring and summer, and a starry sky experience in autumn and winter."
     }
   }
 }

@@ -31,7 +31,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      this.state.homePage && (
+      this.state.homePage.navigation && (
         <footer>
           <div className="footer">
             <div className="footleft">
@@ -57,34 +57,34 @@ class Footer extends React.Component {
                   <div>
                     <li className="liClass">
                       <Link to={"/hotel"}>
-                        <span className="spanClass">酒店</span>
+                        <span className="spanClass">{this.state.homePage.navigation[0]}</span>
                       </Link>
                     </li>
                     <li className="liClass">
                       <Link to={"/hotel"}>
-                        <span className="spanClass">民宿</span>
+                        <span className="spanClass">{this.state.homePage.navigation[1]}</span>
                       </Link>
                     </li>
                     <li className="liClass">
                       <Link to={"/hotel"}>
-                        <span className="spanClass">美食</span>
+                        <span className="spanClass">{this.state.homePage.navigation[2]}</span>
                       </Link>
                     </li>
                   </div>
                   <div>
                     <li className="liClass">
                       <Link to={"/hotel"}>
-                        <span className="spanClass">玩乐</span>
+                        <span className="spanClass">{this.state.homePage.navigation[3]}</span>
                       </Link>
                     </li>
                     <li className="liClass">
                       <Link to={"/hotel"}>
-                        <span className="spanClass">交通指南</span>
+                        <span className="spanClass">{this.state.homePage.navigation[4]}</span>
                       </Link>
                     </li>
                     <li className="liClass">
                       <Link to={"/hotel"}>
-                        <span className="spanClass">联系我们</span>
+                        <span className="spanClass">{this.state.homePage.navigation[5]}</span>
                       </Link>
                     </li>
                   </div>
